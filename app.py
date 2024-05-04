@@ -1,8 +1,6 @@
 import json
 from flask import Flask, request, jsonify
-import youtube_dl
 from ytmusicapi import YTMusic
-from pytube import YouTube
 import os
 
 
