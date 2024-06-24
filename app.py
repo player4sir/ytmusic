@@ -4,7 +4,7 @@ from ytmusicapi import YTMusic
 import os
 
 app = Flask(__name__)
-yt = YTMusic(auth=json.loads(os.environ.get('OAUTH_JSON_CONTENT', '{}')))
+yt = YTMusic(auth=json.loads(os.environ.get('OAUTH_JSON_CONTENT', '{}')),language='zh_CN',location='HK')
 
 @app.route('/search', methods=['GET'])
 def search_song():
