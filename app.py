@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify
 from ytmusicapi import YTMusic
 import os
 app = Flask(__name__)
-yt = YTMusic(auth=json.loads(os.environ.get('OAUTH_JSON_CONTENT', '{}')),location='HK')
+yt = YTMusic(auth=json.loads(os.environ.get('OAUTH_JSON_CONTENT', '{}')))
 @app.route('/search', methods=['GET'])
 def search_song():
     keyword = request.args.get('keyword')
